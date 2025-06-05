@@ -2,7 +2,7 @@ import os
 import csv
 
 # Đường dẫn tới folder chứa cả .wav và .txt
-data_folder = "/Users/tranminhduc/Downloads/630fba81"
+data_folder = "/Users/tranminhduc/Downloads/sample_data"
 
 # File output CSV
 metadata_path = os.path.join(data_folder, "metadata.csv")
