@@ -9,7 +9,7 @@ git clone https://github.com/tuanh123789/Spark-TTS-finetune
 cd Spark-TTS-finetune
 pip install -U packaging setuptools wheel ninja
 pip install --no-build-isolation axolotl[flash-attn,deepspeed]
-pip install -r requirements.txt
+pip install -r requirement.txt
 ```
 **Model Download**
 ```
@@ -22,7 +22,7 @@ bash download_ljspeech.sh
 ```
 ## Create prompt to train LLM
 ```
-python -m src.process_data --data_dir {path_to_dataset} --output_dir {path_to_output_prompts}
+python -m src.process_data --data_dir /Users/tranminhduc/Downloads/sample_data --output_dir /Users/tranminhduc/Downloads/sample_output/
 ```
 ## Training LLM
 Config for training is in the config_axolot folder, you can customize batch size, save steps,...
