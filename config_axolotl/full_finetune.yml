@@ -1,20 +1,18 @@
 base_model: pretrained_models/Spark-TTS-0.5B/LLM
-# Automatically upload checkpoint and final model to HF
-# hub_model_id: username/custom_model_name
+load_in_4bit: false
+load_in_8bit: false
 
 trust_remote_code: true
-
 strict: false
 
 datasets:
   - path: json
-    data_files: ["output_prompt/LJSpeech-1.1.jsonl"]
+    data_files: ["/Users/tranminhduc/Downloads/sample_output/sample_data.jsonl"]
     type: completion
-    
+
 dataset_prepared_path:
 val_set_size: 0.05
 output_dir: ./outputs/out
-
 
 sequence_len: 2048
 sample_packing: true
