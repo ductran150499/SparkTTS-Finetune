@@ -11,7 +11,8 @@ datasets:
 
 dataset_prepared_path:
 val_set_size: 0.05
-output_dir: ./outputs/out
+output_dir: /content/drive/MyDrive/SparkTTS-model
+
 
 sequence_len: 1024
 sample_packing: false
