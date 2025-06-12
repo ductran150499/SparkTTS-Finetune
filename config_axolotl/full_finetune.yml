@@ -1,4 +1,4 @@
-base_model: pretrained_models/Spark-TTS-0.5B/LLM
+base_model: /content/SparkTTS-Finetune/pretrained_models/Spark-TTS-0.5B/LLM
 load_in_4bit: false
 load_in_8bit: false
 
@@ -7,7 +7,7 @@ strict: false
 
 datasets:
   - path: json
-    data_files: ["/Users/tranminhduc/Downloads/sample_output/sample_data.jsonl"]
+    data_files: ["/content/SparkTTS-Finetune/sample_output/sample_data.jsonl"]
     type: completion
 
 dataset_prepared_path:
