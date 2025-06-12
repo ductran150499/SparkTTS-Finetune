@@ -5,7 +5,7 @@ Currently only finetune using global bicodec and semantic bicodec is supported.
 **Install**
 - Clone the repo and install axolotl for finetune Qwen
 ``` sh
-git clone https://github.com/tuanh123789/Spark-TTS-finetune
+git clone https://github.com/ductran150499/SparkTTS-Finetune.git
 cd Spark-TTS-finetune
 pip install -U packaging setuptools wheel ninja
 pip install --no-build-isolation axolotl[flash-attn,deepspeed]
