@@ -1,29 +1,36 @@
 # Spark-TTS-finetune
 Finetune llm part for spark-tts model. This repo can be used to finetune for languages ​​other than English and Chinese.
 Currently only finetune using global bicodec and semantic bicodec is supported.
-## Install an setup
-**Install**
-- Clone the repo and install axolotl for finetune Qwen
-``` sh
-git clone https://github.com/ductran150499/SparkTTS-Finetune.git
-cd Spark-TTS-finetune
-pip install -U packaging setuptools wheel ninja
-pip install --no-build-isolation axolotl[flash-attn,deepspeed]
-pip install -r requirement.txt
+
+## Process data on local machine
+**Create metadata file for dataset**
 ```
-**Model Download**
+python create_metadata.py
 ```
-python -m src.download_pretrain
-```
-**Ljspeech Download**
-- Here I use Ljspeech dataset as an example. You can use any other dataset, any language. Just format the data to Ljspeech format.
-```sh
-bash download_ljspeech.sh
-```
-## Create prompt to train LLM
+**Create prompt to train LLM**
 ```
 python -m src.process_data --data_dir /Users/tranminhduc/Downloads/sample_data --output_dir /Users/tranminhduc/Downloads/sample_output/
 ```
+
+## Install an setup on Colab 
+**Install**
+- Clone the repo and install axolotl for finetune Qwen
+``` sh
+!git clone https://github.com/ductran150499/SparkTTS-Finetune.git
+%cd /content/SparkTTS-Finetune
+!pip install -r requirement.txt
+```
+**Model Download**
+``` sh
+!python /content/SparkTTS-Finetune/src/download_pretrain.py
+```
+**Clone and install axolotl**
+``` sh
+!git clone https://github.com/OpenAccess-AI-Collective/axolotl
+%cd axolotl
+!pip install -e .
+```
+
 ## Training LLM
 Config for training is in the config_axolot folder, you can customize batch size, save steps,...
 training script
