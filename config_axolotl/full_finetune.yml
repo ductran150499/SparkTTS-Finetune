@@ -6,7 +6,7 @@ trust_remote_code: true
 strict: false
 
 datasets:
-  - path: /content/SparkTTS-Finetune/sample_output/sample_data.jsonl
+  - path: /content/SparkTTS-Finetune/data_train/630fba81.jsonl
     type: completion
 
 dataset_prepared_path:
