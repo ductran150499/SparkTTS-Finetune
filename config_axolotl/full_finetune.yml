@@ -2,7 +2,7 @@ base_model: /kaggle/working/pretrained_models/Spark-TTS-0.5B
 load_in_4bit: false
 load_in_8bit: false
 
-trust_remote_code: true
+trust_remote_code: false
 strict: false
 
 datasets:
