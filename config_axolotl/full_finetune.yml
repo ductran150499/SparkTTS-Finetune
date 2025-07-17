@@ -1,4 +1,5 @@
 base_model: /kaggle/working/pretrained_models/Spark-TTS-0.5B
+tokenizer_config: /kaggle/working/pretrained_models/Spark-TTS-0.5B/LLM
 load_in_4bit: false
 load_in_8bit: false
 
