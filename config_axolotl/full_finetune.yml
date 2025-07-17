@@ -1,5 +1,4 @@
-base_model: /kaggle/working/pretrained_models/Spark-TTS-0.5B
-tokenizer_config: /kaggle/working/pretrained_models/Spark-TTS-0.5B/LLM
+base_model: /content/pretrained_models/Spark-TTS-0.5B/LLM
 load_in_4bit: false
 load_in_8bit: false
 
@@ -7,12 +6,12 @@ trust_remote_code: true
 strict: false
 
 datasets:
-  - path: /kaggle/working/SparkTTS-Finetune/data_train/630fba81.jsonl
+  - path: /content/SparkTTS-Finetune/sample_output/sample_data.jsonl
     type: completion
 
 dataset_prepared_path:
 val_set_size: 0.05
-output_dir: /kaggle/working/model_v2
+output_dir: /content/drive/MyDrive/SparkTTS-model
 
 
 sequence_len: 1024
